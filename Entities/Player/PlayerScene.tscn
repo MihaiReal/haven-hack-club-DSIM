@@ -1,0 +1,267 @@
+[gd_scene format=3 uid="uid://chafcu6d1ctp7"]
+
+[ext_resource type="Script" uid="uid://bof2nuip6tvyr" path="res://Entities/Player/character_body_2d.gd" id="1_exqmu"]
+[ext_resource type="Texture2D" uid="uid://bidhat2ox138a" path="res://icon.svg" id="2_bdqw4"]
+[ext_resource type="Texture2D" uid="uid://cjajms6i1dxjk" path="res://Art/Character/Caracter Runing/F1.png" id="2_lcetx"]
+[ext_resource type="Texture2D" uid="uid://cmhkmyhe5g0jy" path="res://Art/Character/Caracter Runing/F2.png" id="3_hasnx"]
+[ext_resource type="Texture2D" uid="uid://exkmjg23sjaq" path="res://Art/Potions/Potions/PP1.png" id="4_4xrhu"]
+[ext_resource type="Texture2D" uid="uid://cwbdv1nejlyp2" path="res://Art/Character/Caracter Runing/F3.png" id="4_ifom3"]
+[ext_resource type="Texture2D" uid="uid://bxwsmle5kci3a" path="res://Art/Character/Caracter Runing/F4.png" id="5_eg3fj"]
+[ext_resource type="Texture2D" uid="uid://dtasok5jfos2d" path="res://Art/Potions/Potions/PP2.png" id="5_k041o"]
+[ext_resource type="Texture2D" uid="uid://j03b2rg83vfi" path="res://Art/Character/Caracter Runing/F5.png" id="6_2pmqc"]
+[ext_resource type="Texture2D" uid="uid://d2qvewmf785yv" path="res://Art/Potions/Potions/PR1.png" id="6_bkv05"]
+[ext_resource type="Texture2D" uid="uid://bq6o7xtyb67ov" path="res://Art/Potions/Potions/PR2.png" id="7_4xrhu"]
+[ext_resource type="Texture2D" uid="uid://ddukkwrtso53x" path="res://Art/Character/Caracter Runing/F6.png" id="7_efdq2"]
+[ext_resource type="Texture2D" uid="uid://blqfpjedcovpv" path="res://Art/Character/Caracter Runing/F7.png" id="8_4xrhu"]
+[ext_resource type="Texture2D" uid="uid://clo720fvybspa" path="res://Art/Character/Caracter Runing/F8.png" id="9_k041o"]
+[ext_resource type="FontFile" uid="uid://np4nb303o5dn" path="res://Art/Font/yoster.ttf" id="11_hasnx"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_efdq2"]
+load_path = "res://.godot/imported/select item.png-90658ad876024d6d3af7f3a653db756e.ctex"
+
+[sub_resource type="Animation" id="Animation_cwcnw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_4xrhu")]
+}
+
+[sub_resource type="Animation" id="Animation_wcre3"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("4_4xrhu"), ExtResource("5_k041o")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t5qhd"]
+_data = {
+&"RESET": SubResource("Animation_cwcnw"),
+&"idle": SubResource("Animation_wcre3")
+}
+
+[sub_resource type="Animation" id="Animation_k041o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_bkv05")]
+}
+
+[sub_resource type="Animation" id="Animation_wtl5l"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("6_bkv05"), ExtResource("7_4xrhu")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2f53g"]
+_data = {
+&"RESET": SubResource("Animation_k041o"),
+&"idle": SubResource("Animation_wtl5l")
+}
+
+[sub_resource type="Animation" id="Animation_bkv05"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_lcetx")]
+}
+
+[sub_resource type="Animation" id="Animation_t5qhd"]
+resource_name = "Running"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterSprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.0666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_lcetx"), ExtResource("3_hasnx"), ExtResource("4_ifom3"), ExtResource("5_eg3fj"), ExtResource("6_2pmqc"), ExtResource("7_efdq2"), ExtResource("8_4xrhu"), ExtResource("9_k041o")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wtl5l"]
+_data = {
+&"RESET": SubResource("Animation_bkv05"),
+&"Running": SubResource("Animation_t5qhd")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_anosd"]
+size = Vector2(71, 123)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1470071900]
+script = ExtResource("1_exqmu")
+metadata/_edit_group_ = true
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1935080443]
+position = Vector2(423, 49)
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=645071058]
+visible = false
+modulate = Color(1.3596937e-05, 0.67217577, 0.14971232, 1)
+scale = Vector2(1, 0.245)
+texture = ExtResource("2_bdqw4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1916476806]
+
+[node name="PotionLabel" type="Label" parent="." unique_id=734001926]
+offset_left = -38.0
+offset_top = -89.0
+offset_right = 39.0
+offset_bottom = -61.0
+theme_override_fonts/font = ExtResource("11_hasnx")
+theme_override_font_sizes/font_size = 20
+text = "POTION"
+
+[node name="UI" type="Control" parent="." unique_id=1981570057]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="Rect4" type="Sprite2D" parent="UI" unique_id=1876999125]
+position = Vector2(52, 601)
+scale = Vector2(0.8115622, 0.7256262)
+texture = SubResource("CompressedTexture2D_efdq2")
+
+[node name="SelectRectPoison" type="ColorRect" parent="UI/Rect4" unique_id=1353068217]
+offset_left = -57.913002
+offset_top = -57.881042
+offset_right = 2.008072
+offset_bottom = 2.411621
+scale = Vector2(1.9199994, 1.9200025)
+color = Color(0.8235294, 0.42745098, 0, 0.7176471)
+
+[node name="QLabel" type="Label" parent="UI/Rect4" unique_id=1586769357]
+z_index = 1
+offset_left = -60.37738
+offset_top = -139.19011
+offset_right = 52.984238
+offset_bottom = -28.940536
+theme_override_fonts/font = ExtResource("11_hasnx")
+theme_override_font_sizes/font_size = 50
+text = "Q"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Rect4" unique_id=1493174765]
+texture = ExtResource("4_4xrhu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Rect4" unique_id=1829286295]
+libraries/ = SubResource("AnimationLibrary_t5qhd")
+autoplay = &"idle"
+
+[node name="Rect5" type="Sprite2D" parent="UI" unique_id=680443390]
+position = Vector2(191, 599.77997)
+scale = Vector2(0.83156234, 0.7534387)
+texture = SubResource("CompressedTexture2D_efdq2")
+
+[node name="SelectRectRemove" type="ColorRect" parent="UI/Rect5" unique_id=1685564908]
+offset_left = -57.29168
+offset_top = -56.77072
+offset_right = 2.7494316
+offset_bottom = 3.3654785
+scale = Vector2(1.9199994, 1.9200025)
+color = Color(0.8235294, 0.42745098, 0, 0.7176471)
+
+[node name="ELabel" type="Label" parent="UI/Rect5" unique_id=911370822]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.12139
+offset_top = -201.74176
+offset_right = -6.8786087
+offset_bottom = -86.27118
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_hasnx")
+theme_override_font_sizes/font_size = 50
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="UI/Rect5" unique_id=1200600908]
+texture = ExtResource("6_bkv05")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/Rect5" unique_id=32735566]
+libraries/ = SubResource("AnimationLibrary_2f53g")
+autoplay = &"idle"
+
+[node name="Label" type="Label" parent="UI" unique_id=1955843312]
+z_index = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 191.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("11_hasnx")
+theme_override_font_sizes/font_size = 50
+text = "TIMP"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1633604504]
+libraries/ = SubResource("AnimationLibrary_wtl5l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=888992323]
+position = Vector2(-3.5, 0.5)
+shape = SubResource("RectangleShape2D_anosd")
+
+[node name="CharacterSprite" type="Sprite2D" parent="." unique_id=611948619]
+texture = ExtResource("2_lcetx")
+
+[node name="Timer" type="Timer" parent="." unique_id=1718338164]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://db476uo3akq67"]
+
+[ext_resource type="Texture2D" uid="uid://b557qytb1u0uj" path="res://Art/Tiles/Tiles an asets/DEAD BLOCK.png" id="1_hjg7r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5q2n"]
+size = Vector2(109, 89)
+
+[node name="OldBody" type="CharacterBody2D" unique_id=1470071900]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=888992323]
+position = Vector2(-2.5, 11.5)
+shape = SubResource("RectangleShape2D_s5q2n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=611948619]
+modulate = Color(0.92941177, 0.40392157, 0.18039216, 1)
+texture = ExtResource("1_hjg7r")
+
+[node name="Timer" type="Timer" parent="." unique_id=1718338164]
+wait_time = 5.0
+one_shot = true
+autostart = true

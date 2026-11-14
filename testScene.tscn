@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://bpwtsumcrbj4b"]
+
+[ext_resource type="PackedScene" uid="uid://chafcu6d1ctp7" path="res://Entities/Player/PlayerScene.tscn" id="1_2atia"]
+[ext_resource type="Script" uid="uid://cc28t87t8vy28" path="res://LevelScript.gd" id="1_vixnb"]
+[ext_resource type="Texture2D" uid="uid://dsdau36sqhg6b" path="res://Art/Background/background/background/background 3 bun.png" id="2_5lntk"]
+[ext_resource type="FontFile" uid="uid://np4nb303o5dn" path="res://Art/Font/yoster.ttf" id="3_5lntk"]
+[ext_resource type="PackedScene" uid="uid://dy1kuebg17c0s" path="res://spike.tscn" id="4_w2vy6"]
+[ext_resource type="Texture2D" uid="uid://exkmjg23sjaq" path="res://Art/Potions/Potions/PP1.png" id="5_aq4tv"]
+[ext_resource type="Texture2D" uid="uid://d2qvewmf785yv" path="res://Art/Potions/Potions/PR1.png" id="7_60y0o"]
+[ext_resource type="Texture2D" uid="uid://brfbn5vn75vl3" path="res://Art/gingirica.png" id="8_c3fdh"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_anosd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w2vy6"]
+load_path = "res://.godot/imported/background 2.png-df3b03eafb32445f2351e78022f2cec9.ctex"
+
+[node name="Node2D" type="Node2D" unique_id=1339914135]
+script = ExtResource("1_vixnb")
+
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1300244209]
+position = Vector2(48, 430)
+
+[node name="BAZA" type="StaticBody2D" parent="." unique_id=1900120317]
+position = Vector2(397, 706)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BAZA" unique_id=1514566649]
+shape = SubResource("WorldBoundaryShape2D_anosd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=316910713]
+visible = false
+z_index = -1
+position = Vector2(1509, -169.99998)
+scale = Vector2(11.367587, 22.169079)
+texture = SubResource("CompressedTexture2D_w2vy6")
+
+[node name="Background3Bun" type="Sprite2D" parent="." unique_id=1723663994]
+position = Vector2(2895, 434)
+scale = Vector2(1.115625, 1)
+texture = ExtResource("2_5lntk")
+
+[node name="Background3Bun2" type="Sprite2D" parent="." unique_id=1867482410]
+position = Vector2(2895, 434)
+scale = Vector2(1.115625, 1)
+texture = ExtResource("2_5lntk")
+
+[node name="CharacterBody2D" parent="." unique_id=1470071900 instance=ExtResource("1_2atia")]
+z_index = 1
+position = Vector2(60, 470)
+
+[node name="Spike" parent="." unique_id=768642787 instance=ExtResource("4_w2vy6")]
+position = Vector2(5138, 742)
+scale = Vector2(1, 2.9199998)
+
+[node name="Spike2" parent="." unique_id=690208817 instance=ExtResource("4_w2vy6")]
+position = Vector2(887, 579.00006)
+scale = Vector2(1, 2.9199998)
+
+[node name="Spike3" parent="." unique_id=1756981756 instance=ExtResource("4_w2vy6")]
+position = Vector2(1611, 641)
+scale = Vector2(1.3418746, 1.1538124)
+
+[node name="Spike11" parent="." unique_id=1275577623 instance=ExtResource("4_w2vy6")]
+position = Vector2(1480.0001, 638)
+scale = Vector2(1.3418746, 1.1538124)
+
+[node name="Spike12" parent="." unique_id=1017149149 instance=ExtResource("4_w2vy6")]
+position = Vector2(1753.0001, 644)
+scale = Vector2(1.3418746, 1.1538124)
+
+[node name="Spike13" parent="." unique_id=698626468 instance=ExtResource("4_w2vy6")]
+position = Vector2(1900, 641)
+scale = Vector2(1.3418746, 1.1538124)
+
+[node name="Spike10" parent="." unique_id=1107953358 instance=ExtResource("4_w2vy6")]
+position = Vector2(4449, 641)
+scale = Vector2(1.3418746, 1.1538124)
+
+[node name="Spike4" parent="." unique_id=1228154492 instance=ExtResource("4_w2vy6")]
+position = Vector2(2260, 667)
+scale = Vector2(1, 0.6799984)
+
+[node name="Spike6" parent="." unique_id=864507155 instance=ExtResource("4_w2vy6")]
+position = Vector2(2375, 667)
+scale = Vector2(1, 0.6799984)
+
+[node name="Spike5" parent="." unique_id=646643792 instance=ExtResource("4_w2vy6")]
+position = Vector2(3248.9998, 528.00006)
+scale = Vector2(1, 2.9199998)
+
+[node name="Spike7" parent="." unique_id=1980187515 instance=ExtResource("4_w2vy6")]
+position = Vector2(3369, 528.00006)
+scale = Vector2(1, 2.9199998)
+
+[node name="Spike8" parent="." unique_id=1057093606 instance=ExtResource("4_w2vy6")]
+position = Vector2(2809, 387.99997)
+rotation = -3.135584
+scale = Vector2(1, 2.9199998)
+
+[node name="Spike9" parent="." unique_id=1415234769 instance=ExtResource("4_w2vy6")]
+position = Vector2(2918, 387.99997)
+rotation = -3.135584
+scale = Vector2(1, 2.9199998)
+
+[node name="Label" type="Label" parent="." unique_id=2064010277]
+offset_left = -370.0
+offset_top = 293.0
+offset_right = 619.0
+offset_bottom = 503.0
+theme_override_fonts/font = ExtResource("3_5lntk")
+theme_override_font_sizes/font_size = 67
+text = "WASD - TE MISTI
+Q - POISON- BOUNCE BACK 
+E - UNDO POISON"
+
+[node name="Pp1" type="Sprite2D" parent="." unique_id=345088363]
+position = Vector2(-427.99997, 380.00003)
+scale = Vector2(0.6015625, 0.5859375)
+texture = ExtResource("5_aq4tv")
+
+[node name="Pr1" type="Sprite2D" parent="." unique_id=126081672]
+position = Vector2(-424.00003, 471)
+scale = Vector2(0.515625, 0.53125)
+texture = ExtResource("7_60y0o")
+
+[node name="Label2" type="Label" parent="." unique_id=976024144]
+offset_left = 5577.0
+offset_top = 509.0
+offset_right = 6566.0
+offset_bottom = 719.0
+theme_override_fonts/font = ExtResource("3_5lntk")
+theme_override_font_sizes/font_size = 30
+text = "\"BUNA SPIKE!
+TE-AI INTORS? MI-A FOST DOR DE TINE!
+MULTUMESC CA TE-AI JUCAT JOCUL!\"Q"
+
+[node name="Gingirica" type="Sprite2D" parent="." unique_id=632422200]
+position = Vector2(5789, 648)
+texture = ExtResource("8_c3fdh")
+
+[node name="BAZA2" type="StaticBody2D" parent="." unique_id=1828558996]
+position = Vector2(5955, 588)
+rotation = -1.5656205
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BAZA2" unique_id=1140802946]
+shape = SubResource("WorldBoundaryShape2D_anosd")
